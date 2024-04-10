@@ -1,0 +1,56 @@
+h1 {
+  font-size: 48px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+img {
+  border: 6px dotted orange;
+}
+
+p {
+  color: pink;
+}
+
+.special-paragraph {
+  color: red;
+  padding: 20px;
+  border: 2px solid red;
+  margin: 25px 100px;
+}
+
+body p.special-paragraph {
+  color: blue;
+}
+
+#heading {
+  color: orange;
+}
+
+.box {
+  border: 2px solid red;
+  padding: 20px;
+  margin: 20px;
+}
+
+.box p {
+  color: red;
+}
+
+.box p a {
+  color: #999;
+}
+
+.box div {
+}
+
+div .box {
+}
+
+button[type="submit"] {
+  background: red;
+}
+
+.box div:nth-child(4n + 1) {
+  color: green;
+}
