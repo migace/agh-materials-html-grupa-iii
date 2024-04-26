@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube</title>
+    <style>
+      #cube {
+        width: 200px;
+        height: 200px;
+        border: 4px dashed red;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cube"></div>
+    <script>
+      const cubeEl = document.getElementById("cube");
+
+      cubeEl.addEventListener("click", function () {
+        console.log("Clicked!");
+      });
+
+      let counter = 0;
+      let direction = 1; // 1 - w prawo, 0 - w lewo
+      setInterval(function () {
+        if (direction === 1) {
+          cubeEl.style.left = `${counter++}px`;
+        } else {
+          cubeEl.style.left = `${counter--}px`;
+        }
+
+        // cubeEl.style.left = `${counter}px`;
+        // counter = counter + 1;
+
+        if (counter === 300) {
+          direction = 0;
+        } else if (counter === 0) {
+          direction = 1;
+        }
+      }, 1000 / 60);
+    </script>
+  </body>
+</html>
